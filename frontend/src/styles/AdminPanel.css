@@ -1,0 +1,307 @@
+/* ============================================
+   AdminPanel.css – общие стили для админ-панели
+   ============================================ */
+
+.admin-panel {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.admin-header h1 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.admin-header button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.admin-header button:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.tabs button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.tabs button:hover:not(.active) {
+  background: var(--border);
+}
+
+/* ============================================
+   UserManager
+   ============================================ */
+
+.user-manager {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.user-manager h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.user-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  flex: 1 1 100px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
+}
+
+.field-error {
+  color: var(--error);
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  line-height: 1.2;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.form-buttons button {
+  padding: 0.7rem 1.4rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.form-buttons button[type="submit"] {
+  background: var(--accent);
+  color: #fff;
+}
+.form-buttons button[type="submit"]:hover {
+  background: #0056cc;
+}
+
+.form-buttons button[type="button"] {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.form-buttons button[type="button"]:hover {
+  background: var(--border);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.user-table thead {
+  background: var(--bg-secondary);
+}
+
+.user-table th {
+  padding: 0.8rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+.user-table td {
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.user-table tbody tr:hover {
+  background: rgba(0, 119, 255, 0.03);
+}
+
+.user-table button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.user-table button:hover {
+  transform: scale(1.2);
+}
+
+/* ========== Room Manager ========== */
+.room-manager {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.room-manager h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.room-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: auto;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.room-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.room-table thead {
+  background: var(--bg-secondary);
+}
+
+.room-table th {
+  padding: 0.8rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+.room-table td {
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.room-table tbody tr:hover {
+  background: rgba(0, 119, 255, 0.03);
+}
+
+.room-table button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.room-table button:hover {
+  transform: scale(1.2);
+}
+
+/* ============================================
+   Адаптив (мобильные)
+   ============================================ */
+@media (max-width: 768px) {
+  .admin-panel {
+    padding: 1rem;
+  }
+
+  .user-manager,
+  .room-manager {
+    padding: 1.5rem 1rem;
+  }
+
+  .user-form,
+  .room-form {
+    flex-direction: column;
+    align-items: stretch;        /* было flex-end, теперь поля растягиваются */
+    gap: 0.8rem;                 /* уменьшен вертикальный промежуток */
+  }
+
+  .form-group {
+    min-width: 100%;
+    flex: none;
+  }
+
+  .form-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .user-table,
+  .room-table {
+    font-size: 0.85rem;
+  }
+
+  .user-table th,
+  .user-table td,
+  .room-table th,
+  .room-table td {
+    padding: 0.6rem 0.3rem;
+  }
+}
